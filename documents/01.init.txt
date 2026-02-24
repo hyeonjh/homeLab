@@ -1,0 +1,25 @@
+fail2ban 설치 (자동 공격 차단)
+
+sudo apt update
+sudo apt install fail2ban -y
+
+확인
+sudo systemctl status fail2ban
+
+공격 확인
+
+hyeonjh@hyeonjh:~$ sudo fail2ban-client status
+Status
+|- Number of jail:      1
+`- Jail list:   sshd
+
+hyeonjh@hyeonjh:~$ sudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:     0
+|  `- Journal matches:  _SYSTEMD_UNIT=sshd.service + _COMM=sshd   
+`- Actions
+   |- Currently banned: 0
+   |- Total banned:     0
+   `- Banned IP list:
