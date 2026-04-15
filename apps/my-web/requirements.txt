@@ -1,0 +1,5 @@
+# requirements.txt 에 다음 내용 적기
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+pydantic==2.5.3  # (선택사항: 다른 의존성 추가 시 여기에 작성)
